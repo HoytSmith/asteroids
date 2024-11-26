@@ -40,7 +40,7 @@ def main():
                 return
             for s in shots:
                 if a.collides(s):
-                    a.kill()
+                    a.split()
                     s.kill()
         
         #rendering
