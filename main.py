@@ -14,13 +14,18 @@ def main():
 
     # game loop
     while True:
+        #events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        player.update(dt)
+        
+        #rendering
         screen.fill((0, 0, 0))
         player.draw(screen)
         pygame.display.flip()
         dt = clock.tick(60) / 1000
+        #end of loop
 
 if __name__ == "__main__":
     main()
